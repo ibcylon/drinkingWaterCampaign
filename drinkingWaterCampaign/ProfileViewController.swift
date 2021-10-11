@@ -23,6 +23,7 @@ class ProfileViewController: UIViewController {
         nickNameTextField.text = UserDefaults.standard.string(forKey: "nickName")
         heightTextField.text = "\(UserDefaults.standard.double(forKey: "height"))"
         weightTextField.text = "\(UserDefaults.standard.integer(forKey: "weight"))"
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         print("!")

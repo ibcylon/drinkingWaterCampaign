@@ -87,13 +87,17 @@ class DrinkWaterViewController: UIViewController {
         let state = goalPercent/10
         
         //이미지 초기화
-        if state < 10 {
-            
-            imageSrc = "1-\(state).png"
-        } else {
+        if state > 9 {
             
             //100% 초과 시 예외 처리
             imageSrc = "1-9.png"
+        } else if state < 1 {
+            
+            //10% 이하일 시
+            imageSrc = "1-1.png"
+        } else {
+            imageSrc = "1-\(state).png"
+            
         }
         
         stateImage.image = UIImage(named: imageSrc)
