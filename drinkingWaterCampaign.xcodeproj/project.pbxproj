@@ -9,21 +9,24 @@
 /* Begin PBXBuildFile section */
 		D570456C271443C400D738D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D570456B271443C400D738D3 /* AppDelegate.swift */; };
 		D570456E271443C400D738D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D570456D271443C400D738D3 /* SceneDelegate.swift */; };
-		D5704570271443C400D738D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D570456F271443C400D738D3 /* ViewController.swift */; };
 		D5704573271443C400D738D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5704571271443C400D738D3 /* Main.storyboard */; };
 		D5704575271443C500D738D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5704574271443C500D738D3 /* Assets.xcassets */; };
 		D5704578271443C500D738D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5704576271443C500D738D3 /* LaunchScreen.storyboard */; };
+		D570458227144C6F00D738D3 /* DrinkWaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D570458127144C6F00D738D3 /* DrinkWaterViewController.swift */; };
+		D570458527144F0100D738D3 /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = D570458427144F0100D738D3 /* TextFieldEffects */; };
+		D5704587271476EE00D738D3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5704586271476EE00D738D3 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D5704568271443C400D738D3 /* drinkingWaterCampaign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = drinkingWaterCampaign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D570456B271443C400D738D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D570456D271443C400D738D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D570456F271443C400D738D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D5704572271443C400D738D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D5704574271443C500D738D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5704577271443C500D738D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5704579271443C500D738D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D570458127144C6F00D738D3 /* DrinkWaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkWaterViewController.swift; sourceTree = "<group>"; };
+		D5704586271476EE00D738D3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D570458527144F0100D738D3 /* TextFieldEffects in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,8 +62,9 @@
 			children = (
 				D570456B271443C400D738D3 /* AppDelegate.swift */,
 				D570456D271443C400D738D3 /* SceneDelegate.swift */,
-				D570456F271443C400D738D3 /* ViewController.swift */,
 				D5704571271443C400D738D3 /* Main.storyboard */,
+				D5704586271476EE00D738D3 /* ProfileViewController.swift */,
+				D570458127144C6F00D738D3 /* DrinkWaterViewController.swift */,
 				D5704574271443C500D738D3 /* Assets.xcassets */,
 				D5704576271443C500D738D3 /* LaunchScreen.storyboard */,
 				D5704579271443C500D738D3 /* Info.plist */,
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = drinkingWaterCampaign;
+			packageProductDependencies = (
+				D570458427144F0100D738D3 /* TextFieldEffects */,
+			);
 			productName = drinkingWaterCampaign;
 			productReference = D5704568271443C400D738D3 /* drinkingWaterCampaign.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = D570455F271443C400D738D3;
+			packageReferences = (
+				D570458327144F0100D738D3 /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
+			);
 			productRefGroup = D5704569271443C400D738D3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5704570271443C400D738D3 /* ViewController.swift in Sources */,
 				D570456C271443C400D738D3 /* AppDelegate.swift in Sources */,
 				D570456E271443C400D738D3 /* SceneDelegate.swift in Sources */,
+				D5704587271476EE00D738D3 /* ProfileViewController.swift in Sources */,
+				D570458227144C6F00D738D3 /* DrinkWaterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +317,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -332,7 +344,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +370,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D570458327144F0100D738D3 /* XCRemoteSwiftPackageReference "TextFieldEffects" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raulriera/TextFieldEffects.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D570458427144F0100D738D3 /* TextFieldEffects */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D570458327144F0100D738D3 /* XCRemoteSwiftPackageReference "TextFieldEffects" */;
+			productName = TextFieldEffects;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D5704560271443C400D738D3 /* Project object */;
 }
