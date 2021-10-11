@@ -70,7 +70,7 @@ class DrinkWaterViewController: UIViewController {
     }
     
     func refreshViews(){
-        
+        var imageSrc : String
         let nickName = UserDefaults.standard.string(forKey: "nickName") ?? "기본 사용자"
         
         //총 섭취량
@@ -87,17 +87,28 @@ class DrinkWaterViewController: UIViewController {
         let state = goalPercent/10
         
         //이미지 초기화
-        stateImage.image = UIImage(named: "1-\(state).png")
+        if state < 10 {
+            
+            imageSrc = "1-\(state).png"
+        } else {
+            
+            //100% 초과 시 예외 처리
+            imageSrc = "1-9.png"
+        }
         
+        stateImage.image = UIImage(named: imageSrc)
+        
+        //상태 레이블 초기화
         if state < 5 {
             userState = .lack
         }else if state < 10 {
             userState = .normal
+           
         }else {
             userState = .overflow
+ 
         }
         
-        //상태 변화
         stateLabel.text = userState.showStatus()
         
         if userState.rawValue == 1 {
@@ -107,7 +118,7 @@ class DrinkWaterViewController: UIViewController {
         }
             
         //print(waterAmount + ", " + goalAmount + ", " + goalPercent + state)
-        //이미지 초기화
+        
         
         
         
