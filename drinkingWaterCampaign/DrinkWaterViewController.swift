@@ -19,11 +19,11 @@ enum UserState:Int {
         case .lack:
             return "더 마셔야해요"
         }
-            
+        
     }
 }
 class DrinkWaterViewController: UIViewController {
-
+    
     @IBOutlet var waterTextField: UITextField!
     @IBOutlet var stateLabel: UILabel!
     @IBOutlet var waterAmountLabel: UILabel!
@@ -35,7 +35,7 @@ class DrinkWaterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor(named: "contentBackground")
         
@@ -79,7 +79,9 @@ class DrinkWaterViewController: UIViewController {
         
         //목표 퍼센트와 권장량
         let goalAmount = (Double(UserDefaults.standard.integer(forKey: "weight")) + UserDefaults.standard.double(forKey: "height")) / 100.0
-        let goalPercent = Int(Double(waterAmount) / (goalAmount * 1000.0) * 100)
+        
+        let goalPercent = Int(Double(waterAmount) / (goalAmount == 0 ? 1 : goalAmount  * 1000.0) * 100)
+        
         
         goalAmountLabel.text = "목표의 \(goalPercent)%"
         averageAmountLabel.text =  "\(nickName)님의 하루 권장럅은 \(goalAmount)L 입니다."
@@ -107,10 +109,10 @@ class DrinkWaterViewController: UIViewController {
             userState = .lack
         }else if state < 10 {
             userState = .normal
-           
+            
         }else {
             userState = .overflow
- 
+            
         }
         
         stateLabel.text = userState.showStatus()
@@ -120,7 +122,7 @@ class DrinkWaterViewController: UIViewController {
         }else {
             stateLabel.textColor = .red
         }
-            
+        
         //print(waterAmount + ", " + goalAmount + ", " + goalPercent + state)
         
         
@@ -135,5 +137,5 @@ class DrinkWaterViewController: UIViewController {
     }
     
     
-
+    
 }
